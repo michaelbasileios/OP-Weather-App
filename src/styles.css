@@ -10,6 +10,10 @@ body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
 }
 img,
 picture,
@@ -38,4 +42,27 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+}
+
+h1 {
+  z-index: 1;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+form label {
+  white-space: nowrap;
 }

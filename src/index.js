@@ -1,5 +1,6 @@
 import "./styles.css";
 
+const temperatureDisplay = document.querySelector("h1");
 const form = document.querySelector("form");
 
 form.addEventListener("submit", (e) => {
@@ -14,7 +15,7 @@ async function getWeather(location = "London") {
   );
   const data = await response.json();
   const currentWeather = data.currentConditions.temp;
-  console.log(data);
+  temperatureDisplay.innerText = `${currentWeather}°F`;
   console.log(currentWeather);
 }
 
